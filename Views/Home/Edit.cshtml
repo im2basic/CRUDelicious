@@ -1,0 +1,29 @@
+@using CruDelicious.Models;
+@model Dishes
+<a href="/">Home</a>
+<div class="Form">
+    <form asp-action="EditProcess" asp-controller="Home" method="post">
+    <span style="color: red;"  asp-validation-for="Tastiness"></span>
+    <span style="color: red;" asp-validation-for="Chef"></span>
+    <span style="color: red;" asp-validation-for="NameDish"></span>
+    <span style="color: red;" asp-validation-for="Calories"></span>
+    <span style="color: red;" asp-validation-for="Description"></span>
+        <label asp-for="Chef"></label>
+        <input asp-for="Chef"><br>
+        <label asp-for="NameDish"></label>
+        <input asp-for="NameDish"><br>
+        <label asp-for="Calories"></label>
+        <input asp-for="Calories"><br>
+    <label asp-for="Tastiness"></label>
+        <select name="Tastiness">
+        <option asp-value="1">1</option>
+        <option asp-value="2">2</option>
+        <option asp-value="3">3</option>
+        <option asp-value="4">4</option>
+        <option asp-value="5">5</option>
+        </select><br>
+        <label asp-for="Description"></label>
+        <input asp-for="Description">
+        <input type="submit" value="Edit Dish">
+    </form>
+</div>

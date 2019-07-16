@@ -1,0 +1,12 @@
+﻿@using CruDelicious.Models
+@model List<Dishes>
+<div class="header">
+<h1>Welcome to CRUDelicious</h1>
+<h5>Check out some dishes!</h5>
+<a href="/new">Add a Dish</a>
+</div><br>
+@foreach(var Dish in Model)
+{
+    <a href="/info/@Dish.DishId">@Dish.NameDish</a><p> by @Dish.Chef</p>
+}
+
